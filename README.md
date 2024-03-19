@@ -1,37 +1,51 @@
-## End to End MAchine Learning Project
+## End to End MAchine Learning Project deployment using ECS and GITHUB Actions:
 
-1. Docker Build checked
-2. Github Workflow
-3. Iam User In AWS
+## Docker and AWS CLI installtion on EC2 instance:
 
-## Docker Setup In EC2 commands to be Executed
+$ sudo apt-get update && sudo apt-get upgrade -y
 
-#optinal
+$ curl -fsSL https://get.docker.com -o get-docker.sh
 
-sudo apt-get update -y
+$ sudo sh get-docker.sh
 
-sudo apt-get upgrade
+$ sudo usermod -aG docker ubuntu
 
-#required
+$ sudo chmod 777 /var/run/docker.sock
 
-curl -fsSL https://get.docker.com -o get-docker.sh
+$ newgrp docker
 
-sudo sh get-docker.sh
+## Installation of AWS CLI on EC2 instance:
 
-sudo usermod -aG docker ubuntu
+$ sudo apt update
 
-newgrp docker
+$ sudo apt install awscli -y
+
+$ aws configure     #(using this cmd add security credentials and region name)
+
+## Push commands for studentperformance ECR repository:
+
+$ aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 705334715992.dkr.ecr.us-east-1.amazonaws.com
+
+$ docker build -t studentperformance .
+
+$ docker tag studentperformance:latest 705334715992.dkr.ecr.us-east-1.amazonaws.com/studentperformance:latest
+
+$ docker push 705334715992.dkr.ecr.us-east-1.amazonaws.com/studentperformance:latest
 
 ## Configure EC2 as self-hosted runner:
 
+$ 
+
+$ 
+
 ## Setup github secrets:
 
-AWS_ACCESS_KEY_ID=
+AWS_ACCESS_KEY_ID= copy and paste access ID
 
-AWS_SECRET_ACCESS_KEY=
+AWS_SECRET_ACCESS_KEY= copy and paste secret access key
 
 AWS_REGION = us-east-1
 
-AWS_ECR_LOGIN_URI = demo>>  566373416292.dkr.ecr.ap-south-1.amazonaws.com
+AWS_ECR_LOGIN_URI = 705334715992.dkr.ecr.us-east-1.amazonaws.com
 
-ECR_REPOSITORY_NAME = simple-app
+ECR_REPOSITORY_NAME = studentperformance
