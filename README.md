@@ -1,6 +1,6 @@
 ## End to End MAchine Learning Project deployment using ECS and GITHUB Actions:
 
-## Docker and AWS CLI installtion on EC2 instance:
+## Install Docker on EC2 instance:
 
 $ sudo apt-get update && sudo apt-get upgrade -y
 
@@ -14,13 +14,13 @@ $ sudo chmod 777 /var/run/docker.sock
 
 $ newgrp docker
 
-## Installation of AWS CLI on EC2 instance:
+## Install AWS CLI on EC2 instance:
 
 $ sudo apt update
 
 $ sudo apt install awscli -y
 
-$ aws configure     #(using this cmd add security credentials and region name)
+$ aws configure        (using this cmd add security credentials and region name)
 
 ## Create ECR repo and use Push commands for studentperformance ECR repository:
 
@@ -35,6 +35,7 @@ $ docker push 705334715992.dkr.ecr.us-east-1.amazonaws.com/studentperformance:la
 ## Configure EC2 as self-hosted runner:
 
 ## Create a folder
+
 $ mkdir actions-runner && cd actions-runner
 
 ## Download the latest runner package
