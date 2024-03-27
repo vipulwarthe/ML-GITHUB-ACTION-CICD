@@ -54,6 +54,14 @@ $ tar xzf ./actions-runner-linux-x64-2.314.1.tar.gz
 ## Create the runner and start the configuration experience
 $ ./config.sh --url https://github.com/vipulwarthe/AWS-CI-CD-Projects --token A6IS6TVNALP6OIKCTJDJI6LF7FPKU
 
+* when you run above command you will put some values like-
+  
+* Enter the name of the runner group to add this runner to : Enter(default)
+* Enter the name of the runner : self-hosted
+* Enter any additional label : [press Enter to skip]
+* Enter name of work folder : [Press Enter]
+* All setup is done
+
 ## Last step, run it!
 $ ./run.sh
 
