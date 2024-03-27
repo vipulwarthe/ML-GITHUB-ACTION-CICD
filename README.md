@@ -14,6 +14,8 @@ $ sudo chmod 777 /var/run/docker.sock
 
 $ newgrp docker
 
+$ docker               (use cmd to check the docker is installed)
+
 ## Install AWS CLI on EC2 instance:
 
 $ sudo apt update
