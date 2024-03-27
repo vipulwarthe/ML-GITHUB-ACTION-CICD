@@ -67,6 +67,8 @@ $ ./run.sh
 
 ## Setup github secrets:
 
+* go to the github repo - security - secrets and variables - Actions 
+
 AWS_ACCESS_KEY_ID= copy and paste access ID
 
 AWS_SECRET_ACCESS_KEY= copy and paste secret access key
