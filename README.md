@@ -51,6 +51,9 @@ $ echo "6c726a118bbe02cd32e222f890e1e476567bf299353a96886ba75b423c1137b5  action
 ## Extract the installer
 $ tar xzf ./actions-runner-linux-x64-2.314.1.tar.gz
 
+## Create the personal access tokan follow below steps
+$ GitHub account -> Settings -> Developer settings -> Personal access tokens -> Generate new token - click on the "Generate token -> Copy Token -> Use Token
+
 ## Create the runner and start the configuration experience
 $ ./config.sh --url https://github.com/vipulwarthe/AWS-CI-CD-Projects --token A6IS6TVNALP6OIKCTJDJI6LF7FPKU
 
