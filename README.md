@@ -1,4 +1,4 @@
-## End to End MAchine Learning Project deployment using ECR, ECS, EC2 and GITHUB Actions:
+## End to End MAchine Learning Project deployment using EC2, ECR, ECS, Docker and GITHUB Actions:
 
 ## Install Docker on EC2 instance:
 
