@@ -43,7 +43,7 @@ $ docker push 705334715992.dkr.ecr.us-east-1.amazonaws.com/studentperformance:la
 
 ## Configure EC2 as self-hosted runner:
 
-$ go to the github repo(AWS CICD projects) Settings -> actions -> Runners -> Runner image -> select linux -> New self hosted runner
+$ go to the github repo(AWS CICD projects) Settings -> actions -> Runners -> Runner image -> select linux -> follow the below commands from runners page
 
 ## Create a folder
 
