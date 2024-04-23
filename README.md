@@ -24,6 +24,10 @@ $ sudo apt install awscli -y
 
 $ aws configure        (using this cmd add security credentials and region name)
 
+## Clone the GIT-HUB repository
+
+$ git clone <repo url>
+
 ## Create ECR repo and use Push commands for studentperformance ECR repository:
 
 $ aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 705334715992.dkr.ecr.us-east-1.amazonaws.com
