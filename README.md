@@ -29,6 +29,7 @@ $ aws configure        (using this cmd add security credentials and region name)
 ## Clone the GIT-HUB repository
 
 $ git clone https://github.com/vipulwarthe/AWS-CI-CD-Projects.git   (clone to the ubuntu server)
+$ cd AWS-CI-CD-Projects.git
 
 ## Create ECR repo and use Push commands for studentperformance ECR repository:
 
@@ -42,7 +43,7 @@ $ docker push 705334715992.dkr.ecr.us-east-1.amazonaws.com/studentperformance:la
 
 ## Configure EC2 as self-hosted runner:
 
-## go to the github repo(AWS CICD projects) setting and click on actions-Runners-New self hosted runner
+$ go to the github repo(AWS CICD projects) Settings -> actions -> Runners -> Runner image -> select linux -> New self hosted runner
 
 ## Create a folder
 
