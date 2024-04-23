@@ -1,5 +1,7 @@
 ## End to End MAchine Learning Project deployment using EC2, ECR, ECS, Docker and GITHUB Actions:
 
+$ First launch EC2 instance with t2.medium/ubuntu 20.04/all-traffic-anywhere/30gb requirements and connect with xshell.
+
 ## Install Docker on EC2 instance:
 
 $ sudo apt-get update && sudo apt-get upgrade -y
