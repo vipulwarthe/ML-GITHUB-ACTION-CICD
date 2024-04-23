@@ -28,7 +28,7 @@ $ aws configure        (using this cmd add security credentials and region name)
 
 ## Clone the GIT-HUB repository
 
-$ git clone <repo url>
+$ git clone https://github.com/vipulwarthe/AWS-CI-CD-Projects.git   (clone to the ubuntu server)
 
 ## Create ECR repo and use Push commands for studentperformance ECR repository:
 
