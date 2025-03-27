@@ -4,42 +4,42 @@ $ First launch EC2 instance with t2.medium/ubuntu 20.04/all-traffic-anywhere/30g
 
 ## Install Docker on EC2 instance:
 
-$ sudo apt-get update && sudo apt-get upgrade -y
+    sudo apt-get update && sudo apt-get upgrade -y
 
-$ curl -fsSL https://get.docker.com -o get-docker.sh
+    curl -fsSL https://get.docker.com -o get-docker.sh
 
-$ sudo sh get-docker.sh
+    sudo sh get-docker.sh
 
-$ sudo usermod -aG docker ubuntu
+    sudo usermod -aG docker ubuntu
 
-$ sudo chmod 777 /var/run/docker.sock
+    sudo chmod 777 /var/run/docker.sock
 
-$ newgrp docker
+    newgrp docker
 
-$ docker               (use cmd to check the docker is installed)
+    docker               (use cmd to check the docker is installed)
 
 ## Install AWS CLI on EC2 instance:
 
-$ sudo apt update
+    sudo apt update
 
-$ sudo apt install awscli -y
+    sudo apt install awscli -y
 
-$ aws configure        (using this cmd add security credentials and region name)
+    aws configure        (using this cmd add security credentials and region name)
 
 ## Clone the GIT-HUB repository
 
-$ git clone https://github.com/vipulwarthe/AWS-CI-CD-Projects.git   (clone to the ubuntu server)
-$ cd AWS-CI-CD-Projects.git
+    git clone https://github.com/vipulwarthe/AWS-CI-CD-Projects.git   (clone to the ubuntu server)
+    cd AWS-CI-CD-Projects.git
 
 ## Create ECR repo and use Push commands for studentperformance ECR repository:
 
-$ aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 705334715992.dkr.ecr.us-east-1.amazonaws.com
+    aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 705334715992.dkr.ecr.us-east-1.amazonaws.com
 
-$ docker build -t studentperformance .
+    docker build -t studentperformance .
 
-$ docker tag studentperformance:latest 705334715992.dkr.ecr.us-east-1.amazonaws.com/studentperformance:latest
+    docker tag studentperformance:latest 705334715992.dkr.ecr.us-east-1.amazonaws.com/studentperformance:latest
 
-$ docker push 705334715992.dkr.ecr.us-east-1.amazonaws.com/studentperformance:latest
+    docker push 705334715992.dkr.ecr.us-east-1.amazonaws.com/studentperformance:latest
 
 ## Configure EC2 as self-hosted runner:
 
@@ -47,22 +47,27 @@ $ go to the github repo(AWS CICD projects) Settings -> actions -> Runners -> Run
 
 ## Create a folder
 
-$ mkdir actions-runner && cd actions-runner
+    mkdir actions-runner && cd actions-runner
 
 ## Download the latest runner package
-$ curl -o actions-runner-linux-x64-2.314.1.tar.gz -L https://github.com/actions/runner/releases/download/v2.314.1/actions-runner-linux-x64-2.314.1.tar.gz
+
+    curl -o actions-runner-linux-x64-2.314.1.tar.gz -L https://github.com/actions/runner/releases/download/v2.314.1/actions-runner-linux-x64-2.314.1.tar.gz
 
 ## Optional: Validate the hash
-$ echo "6c726a118bbe02cd32e222f890e1e476567bf299353a96886ba75b423c1137b5  actions-runner-linux-x64-2.314.1.tar.gz" | shasum -a 256 -c
+
+    echo "6c726a118bbe02cd32e222f890e1e476567bf299353a96886ba75b423c1137b5  actions-runner-linux-x64-2.314.1.tar.gz" | shasum -a 256 -c
 
 ## Extract the installer
-$ tar xzf ./actions-runner-linux-x64-2.314.1.tar.gz
+
+    tar xzf ./actions-runner-linux-x64-2.314.1.tar.gz
 
 ## Create the personal access tokan follow below steps
+
 $ GitHub account -> Settings -> Developer settings -> Personal access tokens -> Generate new token - click on the "Generate token -> Copy Token -> Use Token
 
 ## Create the runner and start the configuration experience
-$ ./config.sh --url https://github.com/vipulwarthe/AWS-CI-CD-Projects --token A6IS6TVNALP6OIKCTJDJI6LF7FPKU
+
+    ./config.sh --url https://github.com/vipulwarthe/AWS-CI-CD-Projects --token A6IS6TVNALP6OIKCTJDJI6LF7FPKU
 
 * when you run above command you will put some values like-
   
@@ -73,11 +78,12 @@ $ ./config.sh --url https://github.com/vipulwarthe/AWS-CI-CD-Projects --token A6
 * All setup is done
 
 ## Last step, run it!
-$ ./run.sh
+
+    ./run.sh
 
 ## Setup github secrets:
 
-* go to the github repo - security - secrets and variables - Actions 
+* go to the github repo - security - secrets and variables - Actions - add below details
 
 AWS_ACCESS_KEY_ID= copy and paste access ID
 
@@ -93,4 +99,4 @@ Try to make some changes in your github repo code and you will see github action
 
 Last step is to check in your browser with your pubic IP along with port, you will see your application is running...
 
-https://172.31.50.170:8080/predictdata
+    https://172.31.50.170:8080/predictdata
