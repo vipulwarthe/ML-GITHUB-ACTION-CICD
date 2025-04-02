@@ -99,4 +99,4 @@ Try to make some changes in your github repo code and you will see github action
 
 Last step is to check in your browser with your pubic IP along with port, you will see your application is running...
 
-    https://172.31.50.170:8080/predictdata
+    http://172.31.50.170:8080/predictdata
