@@ -28,8 +28,8 @@ $ First launch EC2 instance with t2.medium/ubuntu 20.04/all-traffic-anywhere/30g
 
 ## Clone the GIT-HUB repository
 
-    git clone https://github.com/vipulwarthe/AWS-CI-CD-Projects.git   (clone to the ubuntu server)
-    cd AWS-CI-CD-Projects.git
+    git clone https://github.com/vipulwarthe/ML-GITHUB-ACTION-CICD.git   (clone to the ubuntu server)
+    cd ML-GITHUB-ACTION-CICD
 
 ## Create ECR repo and use Push commands for studentperformance ECR repository:
 
