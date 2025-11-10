@@ -2,9 +2,19 @@
 
 $ First launch EC2 instance with t2.medium/ubuntu 20.04/all-traffic-anywhere/30gb requirements and connect with xshell.
 
+## Install python environment and activate it:
+
+    sudo apt-get update
+
+    sudo apt install python3-venv -y
+
+    python3 -m venv MLPRO
+
+    source MLPRO/bin/activate
+
 ## Install Docker on EC2 instance:
 
-    sudo apt-get update && sudo apt-get upgrade -y
+    sudo apt-get update 
 
     curl -fsSL https://get.docker.com -o get-docker.sh
 
