@@ -20,9 +20,10 @@ $ First launch EC2 instance with t2.medium/ubuntu 20.04/all-traffic-anywhere/30g
 
 ## Install AWS CLI on EC2 instance:
 
-    sudo apt update
-
-    sudo apt install awscli -y
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    sudo apt install unzip -y
+    unzip awscliv2.zip
+    sudo ./aws/install 
 
     aws configure        (using this cmd add security credentials and region name)
 
