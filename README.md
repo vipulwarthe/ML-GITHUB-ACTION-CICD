@@ -42,6 +42,12 @@ $ First launch EC2 instance with t2.medium/ubuntu 20.04/all-traffic-anywhere/30g
     git clone https://github.com/vipulwarthe/ML-GITHUB-ACTION-CICD.git   (clone to the ubuntu server)
     cd ML-GITHUB-ACTION-CICD
 
+    pip install -r requirements.txt
+
+Access your application:
+
+    python3 app.py
+
 ## Create ECR repo and use Push commands for studentperformance ECR repository:
 
     aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 705334715992.dkr.ecr.us-east-1.amazonaws.com
