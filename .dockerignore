@@ -1,0 +1,38 @@
+# Ignore virtual environments
+venv/
+.env/
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Ignore model training artifacts
+data/
+dataset/
+notebooks/
+experiments/
+*.ipynb
+*.csv
+*.xlsx
+*.zip
+
+# Ignore build & temp files
+*.log
+*.tmp
+*.bak
+
+# Ignore system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Ignore Git & CI/CD metadata
+.git/
+.gitignore
+.github/
+
+# Ignore Docker intermediate files
+Dockerfile.old
+docker-compose.yml
