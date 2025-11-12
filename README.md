@@ -64,7 +64,7 @@ go to the server and copy public ip with 8080 port to access the application
 
 ## Configure EC2 as self-hosted runner:
 
-$ go to the github repo(AWS CICD projects) Settings -> actions -> Runners -> Runner image -> select linux -> follow the below commands from runners page
+$ go to the github repo(ML-GITHUB-ACTION-CICD) Settings -> actions -> Runners -> Runner image -> select linux -> follow the below commands from runners page
 
 ## Create a folder
 
