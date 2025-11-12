@@ -44,9 +44,13 @@ $ First launch EC2 instance with t2.medium/ubuntu 20.04/all-traffic-anywhere/30g
 
     pip install -r requirements.txt
 
-Access your application:
+Run your application using below command:
 
     python3 app.py
+
+go to the server and copy public ip with 8080 port to access the application  
+
+    http://13.219.184.135:8080/predictdata    
 
 ## Create ECR repo and use Push commands for studentperformance ECR repository:
 
