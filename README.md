@@ -39,8 +39,8 @@ $ First launch EC2 instance with t2.medium/ubuntu 20.04/all-traffic-anywhere/30g
 
 ## Clone the GIT-HUB repository
 
-    git clone https://github.com/vipulwarthe/ML-GITHUB-ACTION-CICD.git   (clone to the ubuntu server)
-    cd ML-GITHUB-ACTION-CICD
+    git clone https://github.com/vipulwarthe/sp-app-github-actions-cicd.git   (clone to the ubuntu server)
+    cd sp-app-github-actions-cicd
 
     pip install -r requirements.txt
 
@@ -64,7 +64,7 @@ go to the server and copy public ip with 8080 port to access the application
 
 ## Configure EC2 as self-hosted runner:
 
-$ go to the github repo(ML-GITHUB-ACTION-CICD) Settings -> actions -> Runners -> Runner image -> select linux -> follow the below commands from runners page
+$ go to the github repo(sp-app-github-actions-cicd) Settings -> actions -> Runners -> Runner image -> select linux -> follow the below commands from runners page
 
 ## Create a folder
 
@@ -88,7 +88,7 @@ $ GitHub account -> Settings -> Developer settings -> Personal access tokens -> 
 
 ## Create the runner and start the configuration experience
 
-    ./config.sh --url https://github.com/vipulwarthe/AWS-CI-CD-Projects --token A6IS6TVNALP6OIKCTJDJI6LF7FPKU
+    ./config.sh --url https://github.com/vipulwarthe/sp-app-github-actions-cicd --token A6IS6TVNALP6OIKCTJDJI6LF7FPKU
 
 * when you run above command you will put some values like-
   
@@ -120,4 +120,4 @@ Try to make some changes in your github repo code and you will see github action
 
 Last step is to check in your browser with your pubic IP along with port, you will see your application is running...
 
-    http://172.31.50.170:8080/predictdata
+    http://172.31.50.170:5000/predictdata
