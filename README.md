@@ -48,9 +48,9 @@ Run your application using below command:
 
     python3 app.py
 
-go to the server and copy public ip with 8080 port to access the application  
+go to the server and copy public ip with 5000 port to access the application  
 
-    http://13.219.184.135:8080/predictdata    
+    http://13.219.184.135:5000/predictdata    
 
 ## Create ECR repo and use Push commands for studentperformance ECR repository:
 
